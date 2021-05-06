@@ -1,8 +1,8 @@
-for (let i = 1; i <= 150; i++) {
-    const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
-    fetch(url)
-      .then(res => res.json())
-      .then(pokemon => {
-        console.log(pokemon);
-      });
-  }
+getPokemon();
+
+const api_url= 'https://pokeapi.co/api/v2/'
+async function getPokemon(){
+    const response = await fetch('https://pokeapi.co/api/v2/');
+    const data = await response.json();
+    console.log(data)
+}
